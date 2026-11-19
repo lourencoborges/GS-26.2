@@ -33,14 +33,5 @@ O chat é uma demonstração local baseada em regras e respostas escritas para e
 
 Fontes públicas: EPE/BEN, ANEEL e Inmetro, citadas na análise e na interface. Use o custo efetivo da conta e dados de instalação locais antes de decidir.
 
-## Entregáveis e pendências
-
-- `index.html`, `styles.css`, `app.js`: interface e simulador.
-- `ANALISE_ENERGETICA.md`: metodologia e análise comparativa.
-- `dados/cenario_iluminacao.csv`: parâmetros e unidades.
-- `VIDEO_ROTEIRO.md`: roteiro para vídeo de até três minutos.
-- `TESTES_USUARIOS.md`: protocolo para registrar testes reais; ainda precisa ser realizado pela equipe.
-- `ENTREGA.txt`: modelo do único arquivo texto final; preencher nomes completos, RMs, URL pública do GitHub e URL do vídeo não listado antes de enviar.
-- `arquivo_analise_mobilidade/`: materiais anteriores sobre bicicleta preservados como arquivo, sem relação com esta entrega de energia.
 
 Antes da entrega, realizar e documentar testes, publicar o repositório, gravar o vídeo e completar `ENTREGA.txt` com links acessíveis.
