@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f3">
+  <title>Citizen Assist | Laboratório DSA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Citizen Assist, início">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>citizen<span class="brand-light">assist</span></span>
+    </a>
+    <div class="topbar-meta"><span class="live-dot"></span> Laboratório de estruturas de dados <span class="meta-divider"></span> Projeto acadêmico</div>
+    <button class="button button-primary top-add" id="add-service" type="button"><span aria-hidden="true">+</span> Novo serviço</button>
+  </header>
+
+  <main id="inicio">
+    <section class="intro">
+      <div>
+        <p class="eyebrow"><span>DSA</span> / DEMONSTRAÇÃO INTERATIVA</p>
+        <h1>Serviços que conectam<br><span>pessoas à cidade.</span></h1>
+        <p class="intro-copy">Um catálogo cidadão por trás de uma lista simplesmente encadeada. Explore os dados e veja os algoritmos em ação.</p>
+      </div>
+      <div class="intro-note"><span class="note-icon" aria-hidden="true">✓</span><span>ESTRUTURA ATIVA<br><strong>Lista encadeada</strong></span></div>
+    </section>
+
+    <section class="metrics" aria-label="Resumo do catálogo">
+      <article class="metric"><span class="metric-label">REGISTROS</span><strong id="metric-total">0</strong><span class="metric-caption">nós conectados</span></article>
+      <article class="metric"><span class="metric-label">CATEGORIAS</span><strong id="metric-categories">0</strong><span class="metric-caption">tipos de serviço</span></article>
+      <article class="metric metric-wide"><span class="metric-label">ESTRUTURA</span><strong>O(n)</strong><span class="metric-caption">busca sequencial, nó a nó</span></article>
+      <article class="metric metric-status"><span class="status-ring" aria-hidden="true">✓</span><span><strong>Pronto para explorar</strong><small>Dados locais nesta sessão</small></span></article>
+    </section>
+
+    <div class="workspace">
+      <section class="catalog-panel" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / CATÁLOGO</p><h2 id="catalog-title">Serviços disponíveis</h2></div>
+          <button class="icon-button sort-button" id="sort-services" type="button" title="Ordenar por título" aria-label="Ordenar por título">A–Z</button>
+        </div>
+        <div class="catalog-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar título ou categoria" autocomplete="off"><kbd>/</kbd></label>
+          <span class="result-count" id="result-count">0 serviços</span>
+        </div>
+        <div class="service-list" id="service-list" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">○</span><strong>Nenhum serviço encontrado</strong><small>Tente outro termo ou cadastre um novo serviço.</small></div>
+        <div class="catalog-foot"><span class="foot-dot"></span><span id="catalog-foot-text">Pronto para percorrer a lista</span><span class="key-hint">INSERÇÃO NO FINAL <b>O(n)</b></span></div>
+      </section>
+
+      <aside class="detail-panel" aria-label="Detalhes do serviço e estrutura">
+        <div class="detail-topline"><p class="eyebrow">02 / REGISTRO SELECIONADO</p><span class="id-label" id="detail-id">ID --</span></div>
+        <div class="detail-content" id="detail-content">
+          <span class="detail-category" id="detail-category">SELECIONE UM SERVIÇO</span>
+          <h2 id="detail-title">Cada nó<br>tem seu lugar.</h2>
+          <p class="detail-description" id="detail-description">Selecione um registro no catálogo para ver seus dados e acompanhar como ele se conecta à lista.</p>
+          <div class="detail-fields">
+            <div><span>REQUISITOS</span><p id="detail-requirements">—</p></div>
+            <div><span>LOCAL DE ATENDIMENTO</span><p id="detail-location">—</p></div>
+          </div>
+          <div class="detail-actions"><button class="button button-quiet" id="edit-service" type="button" disabled><span aria-hidden="true">✎</span> Editar</button><button class="button button-delete" id="delete-service" type="button" disabled><span aria-hidden="true">×</span> Excluir</button></div>
+        </div>
+        <div class="structure-box">
+          <div class="structure-heading"><div><p class="eyebrow">VISUALIZAÇÃO DA ESTRUTURA</p><strong>Lista simplesmente encadeada</strong></div><button class="play-button" id="traverse-list" type="button" title="Percorrer nós" aria-label="Percorrer nós"><span aria-hidden="true">▶</span></button></div>
+          <div class="linked-list" id="linked-list" aria-label="Visualização dos nós da lista"></div>
+          <div class="structure-legend"><span><i class="legend-node"></i> nó / serviço</span><span><i class="legend-pointer"></i> próximo</span><span class="null-legend">∅ nulo</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="algorithm-panel" aria-labelledby="algorithm-title">
+      <div class="algorithm-heading"><div><p class="eyebrow">03 / POR DENTRO DO ALGORITMO</p><h2 id="algorithm-title">O que acontece em cada operação?</h2></div><span class="algorithm-tag">COMPLEXIDADE DE TEMPO</span></div>
+      <div class="algorithm-grid">
+        <article class="algorithm-card"><div class="algorithm-top"><span class="algorithm-icon search-icon" aria-hidden="true">⌕</span><span class="complexity">O(n)</span></div><h3>Busca sequencial</h3><p>Começa no primeiro nó e compara cada ID até encontrar o registro. Sem atalho, sem índice.</p><div class="mini-track"><span></span><span></span><span class="track-target"></span><i>alvo</i></div></article>
+        <article class="algorithm-card"><div class="algorithm-top"><span class="algorithm-icon sort-icon" aria-hidden="true">↕</span><span class="complexity complexity-worst">O(n²)</span></div><h3>Insertion sort</h3><p>Retira um nó por vez e o religa na posição correta. Ordenação estável, sem criar outra lista.</p><div class="sort-preview"><span>C</span><span class="sort-arrow">→</span><span class="sort-active">A</span><span>B</span><span class="sort-arrow">→</span><span>A</span><span>B</span><span>C</span></div></article>
+        <article class="algorithm-card analysis-card"><div class="algorithm-top"><span class="algorithm-icon chart-icon" aria-hidden="true">▥</span><span class="complexity">O(n + k log k)</span></div><h3>Resumo por categoria</h3><p>Conta os serviços num percurso e organiza as <span class="inline-k">k</span> categorias encontradas.</p><div class="category-bars" id="category-bars"></div></article>
+      </div>
+      <div class="algorithm-note"><span aria-hidden="true">i</span><p><strong>Um detalhe importante:</strong> buscar por título ou categoria também percorre a lista inteira. A busca é linear, com espaço adicional O(1).</p></div>
+    </section>
+    <footer><span> CITIZEN ASSIST <b>·</b> PROJETO DSA</span><span>Estruturas de dados aplicadas a serviços públicos</span></footer>
+  </main>
+
+  <dialog id="service-dialog" class="service-dialog">
+    <form id="service-form" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow" id="form-eyebrow">NOVO REGISTRO</p><h2 id="form-title">Adicionar serviço</h2></div><button class="icon-button dialog-close" type="button" id="close-dialog" aria-label="Fechar">×</button></div>
+      <input id="form-mode" type="hidden" value="create">
+      <label class="form-field"><span>Identificador</span><input id="form-id" type="number" min="1" required placeholder="Ex.: 12"></label>
+      <label class="form-field"><span>Título</span><input id="form-title-input" type="text" required maxlength="80" placeholder="Nome do serviço"></label>
+      <label class="form-field"><span>Categoria</span><input id="form-category" type="text" required maxlength="40" placeholder="Ex.: Saúde"></label>
+      <label class="form-field"><span>Descrição</span><textarea id="form-description" required rows="3" maxlength="240" placeholder="Como este serviço ajuda o cidadão?"></textarea></label>
+      <div class="form-row"><label class="form-field"><span>Requisitos</span><input id="form-requirements" type="text" required maxlength="120" placeholder="Documentos necessários"></label><label class="form-field"><span>Local de atendimento</span><input id="form-location" type="text" required maxlength="100" placeholder="Onde encontrar"></label></div>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" id="cancel-dialog">Cancelar</button><button class="button button-primary" type="submit" id="submit-service">Adicionar à lista <span aria-hidden="true">→</span></button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

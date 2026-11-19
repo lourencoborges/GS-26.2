@@ -1,0 +1,78 @@
+O QUE PRECISO ENTREGAR POR MATÉRIA
+
+Resumo baseado nos arquivos encontrados neste projeto. Confira o enunciado da disciplina para confirmar formato, prazo e critérios que não estejam registrados aqui.
+
+============================================================
+DSA — ESTRUTURA DE DADOS E ALGORITMOS
+============================================================
+Projeto: catálogo interativo de serviços públicos usando lista simplesmente encadeada.
+
+Entregar/apresentar, conforme o PDF da Global Solution DSA:
+- Código-fonte funcional em C ou Python, com instruções de execução/compilação.
+- Documentação técnica: recorte do problema, modelo dos registros, lista encadeada e menu.
+- Análise Big-O justificada para inserção, busca, remoção e ordenação.
+- Evidências de testes realizados, com entradas, resultados esperados e observados; incluir lista vazia, registros inexistentes e entradas inválidas.
+- Demonstração prática das operações principais, mostrando o funcionamento real da estrutura e dos algoritmos.
+- O sistema deve incluir CRUD, busca por identificador e por atributo, ordenação própria, análise útil, menu e validação de entradas.
+
+O PDF exige uma demonstração prática, mas não diz que ela precisa ser um vídeo nem define formato ou duração. Confirmar com o professor como entregar essa demonstração. O roteiro de vídeo em `DSA/VIDEO_ROTEIRO.md` pode ser usado se o professor aceitar vídeo como formato.
+
+Arquivos disponíveis: DSA/index.html, DSA/styles.css, DSA/app.js, DSA/main.py e DSA/README.md.
+
+Pendências: registrar evidências reais dos testes (o README traz um roteiro, mas não os resultados observados); confirmar formato de envio da documentação e demonstração, além de integrantes. O PDF não exige link de repositório ou vídeo explicitamente.
+
+============================================================
+MLAM — MACHINE LEARNING E ANÁLISE DE MOBILIDADE
+============================================================
+Projeto: análise estatística de dados reais de compartilhamento de bicicletas, aplicada à mobilidade urbana.
+
+O QUE ENTREGAR NO PORTAL
+Um representante do grupo deve enviar diretamente no Portal, sem substituir os arquivos por links:
+- Base de dados no formato .csv ou .xlsx.
+- Código Python no formato .py.
+- Relatório estatístico no formato .pdf.
+
+O trabalho deve incluir:
+1. Probabilidades sob a hipótese de distribuição normal para uma variável numérica: P(X < média) e P(X > mediana), com classificação dos eventos.
+2. Dois testes de hipótese unilaterais para a média: n=20, α=6%, alternativa média menor; e n=25, α=9%, alternativa média maior. Usar como referência o desvio padrão populacional dos dados.
+3. Análise bivariada de duas variáveis quantitativas: dispersão interpretada, covariância, correlação de Pearson, gráfico de correlação, regressão linear simples, equação, R², teste F, interpretação e previsão.
+4. Análise multivariada linear com pelo menos três variáveis quantitativas: dispersão, matrizes de covariância e correlação, gráfico de correlação, interpretações, equação de regressão múltipla, R², teste F e previsão usando pelo menos duas variáveis explicativas.
+5. Análise multivariada logística binária com pelo menos três variáveis quantitativas: equação, matriz de confusão, acurácia com interpretação e classificação usando pelo menos duas variáveis explicativas.
+6. Relatório profissional em PDF com tabelas, gráficos, medidas estatísticas e interpretações, extraindo insights úteis para o problema de mobilidade.
+
+ARQUIVOS JÁ DISPONÍVEIS
+- Base CSV: MLAM/arquivo_analise_mobilidade/dados/bike_sharing_hour.csv.
+- Código: MLAM/arquivo_analise_mobilidade/codigo/analise.py.
+- Relatório editável: MLAM/arquivo_analise_mobilidade/relatorio_estatistico.docx.
+- Resultados e gráficos: resultados.json e pasta figuras/.
+
+PENDÊNCIAS PARA FECHAR A ENTREGA
+- Exportar o relatório DOCX para PDF e conferir o PDF final.
+- Conferir se o CSV, o .py e o PDF são os arquivos finais corretos e enviá-los no Portal nos formatos exigidos.
+- Incluir nome completo e número de matrícula de todos os integrantes nos materiais/relatório.
+- Conferir as instruções específicas e formatação ensinadas pelo(a) professor(a); a orientação geral alerta que os arquivos efetivamente enviados serão avaliados, sem substituição após o prazo.
+
+O código disponível já contém blocos para probabilidades e testes de hipótese, análise bivariada com regressão simples, análise multivariada linear e logística, além da geração do relatório Word. Portanto, o principal ajuste de formato identificado é gerar e revisar a versão PDF do relatório. A nota informada nas orientações é 10,0; há desconto de 1,0 por item ausente/não atendido e de 2,0 por cadastro ou entrega inadequados.
+
+============================================================
+SERS — SOLUÇÕES EM ENERGIAS RENOVÁVEIS E SUSTENTÁVEIS
+============================================================
+Projeto: Citizen Assist AI — Energia em Casa, com simulador de consumo e comparação de iluminação convencional, LED e energia solar.
+
+Entregar:
+- Protótipo/site funcional com simulador e assistente demonstrativo.
+- Análise energética com metodologia, cálculos, fontes e limitações.
+- CSV com os parâmetros do cenário.
+- Testes reais com 3 a 5 pessoas do público escolhido e registro dos resultados; a documentação informa que ainda estão pendentes.
+- Repositório público no GitHub.
+- Vídeo de até 3 minutos publicado como não listado; testar se o link abre.
+- Arquivo final ENTREGA.txt preenchido com nomes completos, RMs, URL do GitHub e URL do vídeo.
+
+Arquivos principais: SERS/index.html, styles.css, app.js, ANALISE_ENERGETICA.md, dados/cenario_iluminacao.csv, VIDEO_ROTEIRO.md, TESTES_USUARIOS.md e ENTREGA.txt.
+
+Pendências visíveis: realizar e documentar os testes; publicar/revisar o repositório; gravar e publicar o vídeo; substituir os campos de link em SERS/ENTREGA.txt. O material lista Lourenco Borges (RM 569515), Davi Teodoro (RM 571022) e Matheus Jorge (RM 574166); confirmar se os nomes estão completos como exigido.
+
+============================================================
+OBSERVAÇÃO
+============================================================
+Este resumo foi montado somente com os materiais presentes na pasta de trabalho. Prazos, rubricas e exigências adicionais podem estar no portal da faculdade ou no enunciado dado em aula.

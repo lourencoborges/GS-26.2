@@ -1,0 +1,10 @@
+parametro,valor,unidade,classificacao,origem_ou_premissa
+quantidade_lampadas,5,unidades,estimativa,cenario didatico editavel
+horas_por_dia,5,h/dia,estimativa,cenario didatico editavel
+potencia_lampada_atual,60,W por lampada,estimativa,exemplo; verificar produto real
+potencia_lampada_led,9,W por lampada,estimativa,exemplo; verificar equivalencia de fluxo luminoso
+preco_energia,0.90,BRL/kWh,estimativa,substituir pelo custo efetivo da fatura
+producao_solar_especifica,90,kWh/kWp/mes,estimativa,parametro didatico; varia por local e instalacao
+custo_solar_instalado,3000,BRL/kWp,estimativa,sem cotacao ou validacao de mercado
+periodo_mensal,30,dias,convencao,mes simplificado de 30 dias
+periodo_anual,12,meses,convencao,12 meses sem sazonalidade

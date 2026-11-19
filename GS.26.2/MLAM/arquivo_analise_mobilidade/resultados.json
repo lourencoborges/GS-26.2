@@ -1,0 +1,181 @@
+{
+  "source": "UCI Bike Sharing Dataset (hour.csv), doi:10.24432/C5W894",
+  "source_url": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+  "n": 17379,
+  "missing": 0,
+  "years": [
+    2011,
+    2012
+  ],
+  "count": {
+    "mean": 189.46308763450142,
+    "median": 142.0,
+    "std_population": 181.3823804311691,
+    "min": 1,
+    "max": 977
+  },
+  "probability": {
+    "less_than_mean": 0.5,
+    "greater_than_median": 0.6032136799549491,
+    "median_z": -0.26167419085401566
+  },
+  "hypothesis_tests": [
+    {
+      "n": 20,
+      "alpha": 0.06,
+      "alternative": "less",
+      "sample_mean": 190.0,
+      "mu0": 189.46308763450142,
+      "sigma": 181.3823804311691,
+      "z": 0.013238028350505965,
+      "p": 0.5052810549709588,
+      "critical": -1.5547735945968535,
+      "reject": false
+    },
+    {
+      "n": 25,
+      "alpha": 0.09,
+      "alternative": "greater",
+      "sample_mean": 237.72,
+      "mu0": 189.46308763450142,
+      "sigma": 181.3823804311691,
+      "z": 1.330253585017071,
+      "p": 0.09171736717117651,
+      "critical": 1.3407550336902165,
+      "reject": false
+    }
+  ],
+  "bivariate": {
+    "x": "temp",
+    "y": "cnt",
+    "covariance": 14.137599681697694,
+    "pearson_r": 0.4047722757786587,
+    "p_value": 0.0,
+    "slope": 381.2949222591754,
+    "intercept": -0.03559611264248019,
+    "r2": 0.16384059523903455,
+    "f": 3404.922562920401,
+    "f_p": 0.0,
+    "prediction_at_mean_temp": 189.46308763450142,
+    "covariance_matrix": {
+      "temp": {
+        "temp": 0.037077859830737574,
+        "cnt": 14.137599681697694
+      },
+      "cnt": {
+        "temp": 14.137599681697694,
+        "cnt": 32901.46110431105
+      }
+    }
+  },
+  "multivariate": {
+    "predictors": [
+      "temp",
+      "hum",
+      "windspeed"
+    ],
+    "coefficients": {
+      "intercept": 175.81000101743456,
+      "temp": 362.5344177526863,
+      "hum": -273.46510971885004,
+      "windspeed": 26.31982783154247
+    },
+    "r2": 0.25135829386873887,
+    "adjusted_r2": 0.2512290319914212,
+    "f": 1944.5663260103404,
+    "f_p": 0.0,
+    "df_model": 3,
+    "df_resid": 17375,
+    "prediction_at_mean_predictors": 189.4630876345026,
+    "input_means": {
+      "temp": 0.4969871684216583,
+      "hum": 0.6272288394038782,
+      "windspeed": 0.1900976063064618
+    },
+    "covariance": {
+      "temp": {
+        "temp": 0.037077859830737574,
+        "hum": -0.0025960811352752325,
+        "windspeed": -0.0005447701308432311
+      },
+      "hum": {
+        "temp": -0.0025960811352752325,
+        "hum": 0.03722192087154395,
+        "windspeed": -0.006847369045936287
+      },
+      "windspeed": {
+        "temp": -0.0005447701308432311,
+        "hum": -0.006847369045936287,
+        "windspeed": 0.014967131527242624
+      }
+    },
+    "correlation": {
+      "temp": {
+        "temp": 1.0,
+        "hum": -0.06988139105119423,
+        "windspeed": -0.02312526248533279
+      },
+      "hum": {
+        "temp": -0.06988139105119423,
+        "hum": 1.0,
+        "windspeed": -0.2901048950638631
+      },
+      "windspeed": {
+        "temp": -0.02312526248533279,
+        "hum": -0.2901048950638631,
+        "windspeed": 1.0
+      }
+    }
+  },
+  "logistic": {
+    "target_definition": "cnt > mediana (142 locações/hora)",
+    "cutoff": 142.0,
+    "predictors": [
+      "temp",
+      "hum",
+      "windspeed",
+      "hr"
+    ],
+    "coefficients": {
+      "intercept": -2.0740296439042294,
+      "temp": 5.403161367046861,
+      "hum": -3.1669801369446042,
+      "windspeed": -0.22781716668356802,
+      "hr": 0.1242196347369556
+    },
+    "confusion_matrix": [
+      [
+        1315,
+        427
+      ],
+      [
+        411,
+        1323
+      ]
+    ],
+    "accuracy": 0.7589182968929804,
+    "test_size": 3476,
+    "class_balance": {
+      "baixa": 8708,
+      "alta": 8671
+    },
+    "example": {
+      "inputs": {
+        "temp": 0.32,
+        "hum": 0.53,
+        "windspeed": 0.194,
+        "hr": 20.0
+      },
+      "probability_high": 0.6026882159228452,
+      "predicted_class": "alta",
+      "observed_class": "baixa"
+    }
+  },
+  "figures": [
+    "figuras/dispersao_temperatura_locacoes.png",
+    "figuras/matriz_correlacao.png",
+    "figuras/dispersao_multivariada.png",
+    "figuras/correlacao_preditores.png",
+    "figuras/matriz_confusao.png"
+  ]
+}
